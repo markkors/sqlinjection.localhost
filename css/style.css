@@ -1,0 +1,129 @@
+html, body {
+	background-color: #f2f4f7;
+	font-family: arial;
+	color: black;
+	margin: 0px;
+	padding: 0px;
+}
+
+h3 {
+	margin-bottom: 7px;
+}
+
+.source_code {
+	font-family: 'courier new';
+	color: black;
+}
+
+#container {
+	display:inline-block;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+#search_container {
+	width: 600px;
+}
+
+.tips1 {
+	margin-right: 25px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.tips2 {
+	font-size: 15px;
+}
+
+input[type="text"] {
+	padding: 3px;
+	width: 300px;
+}
+
+.cell_header {
+	box-sizing: border-box;
+	width: 200px;
+	padding: 4px;
+	background-color: #515151;
+	color: white;
+	float: left;
+	border: solid 1px #999999;
+}
+
+.cell {
+	box-sizing: border-box;
+	width: 200px;
+	padding: 4px;
+	float: left;
+	border: solid 1px #999999;	
+}
+
+#person_container {
+	display:inline-block;
+	width: 360px;
+}
+
+#actionbar {
+	padding: 5px 10px 5px 5px;
+	background-color: darkblue;
+	color: white;
+	text-align: right;
+}
+
+a {
+	color: blue;
+}
+
+a:hover {
+	color: blue;
+}
+
+a:visited {
+	color: blue;
+}
+
+a:active {
+	color: blue;
+}
+
+#actionbar a {
+	margin-right: 10px;
+	color: white;
+}
+
+#actionbar a:hover {
+	color: white;
+}
+
+#actionbar a:visited {
+	color: white;
+}
+
+#actionbar a:active {
+	color: white;
+}
+
+.caption_wrapper {
+	margin-top: 10px;
+	width: 100px;
+	padding-top: 3px;
+	float: left;
+}
+
+.input_wrapper {
+	margin-top: 10px;
+	width: 250px;
+	float: left;
+}
+
+#sqlbar {
+	padding: 15px;
+	background-color: #e5e54e;
+	border: 1px solid black;
+}
+
+#errorbar {
+	padding: 15px;
+	background-color: #ff8c8c;
+	border: 1px solid black;
+}
