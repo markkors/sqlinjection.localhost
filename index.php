@@ -5,10 +5,12 @@
 		header("location: index.php");
 	}
 	
-	$persons = array();
+	$persons = [];
 	$searchString = "";
 	$sql = "";
 	$error = "";
+	$htmlPersons = null;
+
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		//require_once "saferfunctions.php";	
 		require_once "unsafefunctions.php";	
@@ -16,12 +18,21 @@
 		$searchString = $_POST["search"];
 		try {
 			$persons = findPersons($searchString);
+			foreach($persons as $person) {
+				$htmlPersons .= "<div class=\"cell\">$person->name</div>";
+				$htmlPersons .= "<div class=\"cell\">$person->address</div>";
+				$htmlPersons .= "<div style=\"width: 100px;text-align:center;\" class=\"cell\"><a href=\"person.php?id=$person->id\">Bekijken</a></div>";
+			}
+			
 		}
 		catch(Exception $e) {
 			$error = $e;
 		}
 	}
 	
+
+	
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -78,14 +89,7 @@
 				<div class="cell_header">Naam</div>
 				<div class="cell_header">Adres</div>
 				<div class="cell_header" style="width: 100px;">&nbsp;</div>
-				
-				<?php
-					foreach($persons as $person) {
-						echo "<div class=\"cell\">$person->name</div>";
-						echo "<div class=\"cell\">$person->address</div>";
-						echo "<div style=\"width: 100px;text-align:center;\" class=\"cell\"><a href=\"person.php?id=$person->id\">Bekijken</a></div>";
-					}
-				?>
+				<?=$htmlPersons;?>
 			</div>
 		</div>
 	</body>
